@@ -1,0 +1,35 @@
+# 🧾 Serverless Receipt Uploader (AWS)
+
+A serverless application that allows users to upload receipts (PDF/image), which are stored securely in AWS S3. The app uses AWS Lambda for processing, DynamoDB for metadata storage, and SES for email notifications.
+
+---
+
+## 🚀 Features
+
+- Upload receipt via Amazon S3
+- Trigger AWS Lambda for processing on upload
+- Extract text via Amazon Textract 
+- Save receipt metadata in DynamoDB (e.g., file name, date, amount)
+- Send email confirmation via Amazon SES
+
+---
+
+## 🛠️ Tech Stack
+
+- **AWS Lambda** – Serverless compute
+- **Amazon Textract** - Extract details
+- **Amazon S3** – Storage for receipt files
+- **Amazon DynamoDB** – NoSQL database for metadata
+- **Amazon SES** – Sends email confirmation
+- **IAM Roles** – Secure access between services
+
+---
+
+## 🧱 Architecture
+
+```plaintext
+→ S3 (upload & store file)
+→ Textract (extract the details)
+→ DynamoDB (save metadata)
+→ SES (send confirmation email)
+→ Lambda (automate the whole process)
