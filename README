@@ -33,3 +33,7 @@ A serverless application that allows users to upload receipts (PDF/image), which
 → DynamoDB (save metadata)
 → SES (send confirmation email)
 → Lambda (automate the whole process)
+
+## 🗺️ Architecture Diagram
+
+![Architecture Diagram](./Receipts_architecture.png)
